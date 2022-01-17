@@ -67,6 +67,12 @@ public class App {
         book4.addVolumeToBook(new Volume(faker.number().numberBetween(1, 100), faker.name().fullName()));
         bookDAO.insertIntoTable(book4);
 
+        Book book5 = new Book();
+        book5.setTitle(new Title(faker.book().title(),EncodingType.BASE64));
+        book5.addAuthorToBook(new Author(faker.name().firstName(), faker.name().lastName()));
+        book5.addVolumeToBook(new Volume(faker.number().numberBetween(1, 100), faker.name().fullName()));
+        bookDAO.insertIntoTable(book5);
+
 
 //        log.trace("Trace Message!");
 //        log.debug("Debug Message!");
