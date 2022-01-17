@@ -60,6 +60,14 @@ public class App {
         bookManyToMany3.addVolumeToBook(new Volume(faker.number().numberBetween(1, 100), faker.name().fullName()));
         bookDAO.insertIntoTable(bookManyToMany3);
 
+        
+        Book book4 = new Book();
+        book4.setTitle(new Title(faker.book().title(),EncodingType.BASE64));
+        book4.addAuthorToBook(new Author(faker.name().firstName(), faker.name().lastName()));
+        book4.addVolumeToBook(new Volume(faker.number().numberBetween(1, 100), faker.name().fullName()));
+        bookDAO.insertIntoTable(book4);
+
+
 //        log.trace("Trace Message!");
 //        log.debug("Debug Message!");
 //        log.info("Info Message!");
